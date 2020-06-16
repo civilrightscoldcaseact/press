@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+
+    <meta name="keywords" content="Civil Rights Cold Case Records Collection Act, Press, Press Releases, Press Information, Contact, Cold Case Act, H.R.1272, S.3191, hr1272, s3191, high school legislation">
+
+    <meta property="og:title" content="{{page.title}}">
+    <meta property="og:description" content="Press information and resources for the Civil Rights Cold Case Records Collection Act of 2018.">
+    <meta property="og:image" content="{{'/resources/images/capitolbuilding.jpg' | absolute_url}}">
+    <meta property="og:url" content="{{page.url | absolute_url}}">
+
+    <meta name="twitter:title" content="{{page.title}}">
+    <meta name="twitter:description" content="Press information and resources for the Cold Case Act.">
+    <meta name="twitter:image" content="{{'/resources/images/capitolbuilding.jpg' | absolute_url}}">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <meta name="keywords" content="Cold Case Act Press, Cold Case Act, hr1272, h.r. 1272, s3191, s. 3191, The Civil Rights Cold Case Records Collection Act, Hightstown High School, civil rights, bill, legislation, students">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{page.title}}</title>
+    {% include general.html %}
+  </head>
+  <body>
+    <nav>
+      <h1 class="brand">Cold Case Act Press</h1>
+      <ul class="navlist">
+        <li><a href="https://coldcaseact.com/">Back to Main Site</a></li>
+      </ul>
+    </nav>
+    <main>
+      <ul class="card-container">
+        {% for post in site.posts %}
+        <a class="cardlink" href="{{post.url}}">
+          <li class="card">
+          {%if post.video %}
+            <iframe class="youtube-embed" width="80%" height="100%" src="https://www.youtube.com/embed/{{post.video}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          {%else%}
+            <img class="img-fluid" src="{{post.image | prepend:baseurl}}" alt="{{post.alt}}">
+          {%endif%}
+          <div class="card-body">
+            <h1>{{post.title}}</h1>
+            <p>{{post.preview}}</p>
+          </div>
+          <div class="list-group-item">
+            {% for category in post.categories %}
+              <a href="#" class="sort" data-sort="{{category}}"><p>{{category}}</p></a>
+            {% endfor %}
+          </div>
+        </li>
+        </a>
+        {% endfor %}
+      </ul>
+      <section id="contact">
+          <h1>Contact Information</h1>
+          <p>We can be reached by email at <a href="mailto:press@coldcaseact.com">press@coldcaseact.com</a>.</p>
+          <p>For urgent press matters, Josh Fayer can serve as a point of contact. He can be reached at <a href="mailto:press@coldcaseact.com">jafayer@syr.edu</a>, or by phone number at (609)619-1323.</p>
+      </section>
+
+      <footer>
+        <h1>Cold Case Act Press Page</h1>
+        <p>Full website: <a href="https://coldcaseact.com/">coldcaseact.com</a></p>
+        <p class="copyright">&copy Cold Case Act 2018</p>
+      </footer>
+    </main>
+
+    <script src="{{'/js/scripts.js' | prepend:site.baseurl}}" charset="utf-8"></script>
+  </body>
+</html>

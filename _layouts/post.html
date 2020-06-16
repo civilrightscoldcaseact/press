@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="keywords" content="{{ page.categories | join: ', ' }}, Civil Rights Cold Case Records Collection Act, Cold Case Act, H.R. 1272, S. 3191">
+
+    <meta property="og:title" content="{{page.title}}">
+    <meta property="og:description" content="{{page.preview}}">
+    {%if page.video%}
+      <meta property="og:image" content="{{ page.fallback_img | absolute_url }}">
+      <meta property="og:video" content="https://www.youtube.com/watch?v={{page.video}}">
+      <meta property="og:url" content="{{page.url | absolute_url}}">
+    {%else%}
+      <meta property="og:image" content="{{page.image | absolute_url}}">
+      <meta property="og:url" content="{{page.url | absolute_url}}">
+    {%endif%}
+
+
+    <meta name="twitter:title" content="{{page.title}}">
+    <meta name="twitter:description" content="{{page.preview}}">
+    {% if page.video %}
+    <meta name="twitter:player" content="https://www.youtube.com/embed/{{page.video}}">
+    <meta name="twitter:player:width" content="1424">
+    <meta name="twitter:player:height" content="899">
+    <meta name="twitter:card" content="player">
+    <meta name="twitter:image" content="{{ page.fallback_img | absolute_url }}">
+    {%else%}
+    <meta name="twitter:image" content="{{page.image | absolute_url}}">
+    <meta name="twitter:card" content="summary_large_image">
+    {%endif%}
+
+    <title>{{page.title}}</title>
+    {% include general.html %}
+    {% include post-head.html %}
+  </head>
+  <body>
+    <nav>
+      <h1 class="brand">Cold Case Act Press</h1>
+      <ul class="navlist">
+        <li><a href="https://coldcaseact.com/">Back to Main Site</a></li>
+      </ul>
+    </nav>
+
+    <div class="backbutton">
+      <a href="{{'/' | absolute_url}}">Back</a>
+    </div>
+
+    {%if page.video%}
+      <iframe class="youtube-embed" width="80%" height="100%" src="https://www.youtube.com/embed/{{page.video}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    {%else%}
+      <img class="mainimg" src="{{page.image | prepend:baseurl}}" alt="{{page.alt}}">
+    {%endif%}
+    <main>
+      <h1>{{page.title}}</h1>
+      <p>{{content}}</p>
+    </main>
+  </body>
+</html>

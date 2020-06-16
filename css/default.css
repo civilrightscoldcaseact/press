@@ -1,0 +1,263 @@
+body{
+  background-color: #ececf5;
+  font-family: 'Open Sans', sans-serif;
+}
+
+nav{
+  height: 65px;
+  background-color: #fff;
+  padding: 10px;
+}
+
+.material-shadow{
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.navlist{
+  list-style: none;
+  display: inline-block;
+}
+
+.navlist li a{
+  color: #337ab7;
+  transition: .3s all;
+  font-size: 18px;
+}
+
+.navlist li a:hover{
+  text-decoration: none;
+  color: #3e95e0;
+}
+
+.brand{
+  font-family: 'Montserrat', sans-serif;
+  line-height: 43px;
+  font-size: 24px;
+  display: inline-block;
+  font-weight: bold;
+}
+
+@media(max-width: 460px){
+  .navlist{
+    display: none;
+  }
+  .card{
+    width: 100%;
+  }
+  .brand{
+    width: 100%;
+    text-align: center;
+  }
+}
+
+main{
+  margin-top: 50px;
+}
+
+.card-container{
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  width: 80%;
+  margin: 0 auto;
+  max-width: 768px;
+}
+.card{
+  min-height: 375px;
+  display: flex;
+  overflow: hidden;
+  width: 300px;
+  margin: 15px auto;
+  padding-bottom: 30px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  border-radius: 4%;
+  border: none;
+}
+
+.card iframe{
+  margin: 0 auto;
+  display: block;
+  width: 100%;
+  height: 154px;
+}
+
+.card:hover{
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.cardlink, .cardlink:hover{
+  color: #000;
+  text-decoration: none;
+}
+
+.card h1{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 21px;
+  text-align: center;
+  margin: 5px 0px;
+  margin-bottom: 10px;
+}
+
+.list-group-item{
+  border: none;
+  padding-top: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: unset;
+}
+.list-group-item p{
+	min-width: 45px;
+	background-color: #4acaa8;
+	transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+	border-radius: 15px;
+	color: white;
+	padding: 4px 6px;
+	margin: 4px 6px 0px 0px;
+	font-size: 14px;
+	text-decoration: none;
+}
+.list-group-item a{
+	text-decoration: none;
+  cursor: default;
+}
+.list-group-item p:hover{
+	background-color: #44b395;
+	text-decoration: none !important;
+}
+
+.card-body{
+    padding: 5px 15px;
+}
+
+.readmore{
+  border: none;
+  padding: 12px 15px;
+  background-color: #78dc78;
+  float: right;
+  margin: 15px;
+  color: #fff;
+  transition: .3s all;
+}
+
+.readmore:hover{
+  color: #fff;
+  background-color:#6cbf6c;
+  text-decoration: none;
+}
+
+.readmore::after{
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+#contact{
+  margin-top: 35px;
+  background-color: blue;
+  padding: 30px;
+  background-color: #173280;
+}
+
+#contact h1{
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  font-size: 36px;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+#contact a{
+  color: #ffbeba;
+}
+
+#contact p{
+  max-width: 80%;
+  color: #fff;
+  display: block;
+  margin: 15px auto;
+  text-align: center;
+  max-width: 768px;
+}
+
+footer{
+  background-color: #fff;
+  padding: 25px;
+  padding-bottom: 5px;
+}
+
+footer h1{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 26px;
+  display: block;
+}
+
+.copyright{
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+
+#in-the-news{
+  padding: 25px;
+}
+
+#in-the-news h1{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 48px;
+  text-align: center;
+}
+
+#in-the-news .articlecontainer{
+  overflow-x: scroll;
+  white-space: nowrap;
+  padding: 15px;
+  display: flex;
+}
+
+#in-the-news .articlecard{
+  width: 350px;
+  height: 100%;
+  flex: 1;
+  background-color: #fff;
+  color: #222;
+  text-decoration: none;
+  padding: 25px 20px;
+  white-space: normal;
+  margin: 5px;
+  display: inline-block;
+  transition: .3s all;
+}
+
+#in-the-news a:hover{
+  text-decoration: none;
+}
+#in-the-news a .articlecard:hover{
+  text-decoration: none;
+  color: #222;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+#in-the-news .articlecard h1{
+  font-size: 26px;
+}
+
+#in-the-news .articlecard img{
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+#in-the-news .articlecard .author{
+  font-size: 12;
+  font-style: italic;
+  margin-bottom: 0;
+  margin-top: 5px;
+}
+
+#in-the-news .articlecard p{
+  font-size: 16px;
+}

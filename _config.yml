@@ -1,0 +1,10 @@
+site: "Cold Case Act Press Site"
+baseurl: ""
+url: https://press.coldcaseact.com/
+permalink: /:title/
+collections:
+  posts:
+    output: true
+    permalink: /:title
+plugins:
+  - jekyll-sitemap
