@@ -15,19 +15,22 @@
   color: #3e95e0;
   text-decoration: none;
 }
+
 img {
   width: 80%;
   display: block;
   margin: 0 auto;
   margin-top: 30px;
+  max-width: 1200px;
 }
 
 .youtube-embed{
   height: 600px;
-  max-width: 80%;
+  width: 80%;
   display: block;
   margin: 0 auto;
   margin-top: 30px;
+  max-width: 1200px;
 }
 
 main{
@@ -39,6 +42,7 @@ main{
   min-height: 300px;
   margin-bottom: 50px;
   border-radius: 0px 0px 5px 5px;
+  max-width: 1200px;
 }
 
 main iframe{
