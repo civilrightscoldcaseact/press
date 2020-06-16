@@ -4,7 +4,7 @@ layout: post
 video: "57MQwVFbaTc"
 fallback_img: "/resources/images/jones.jpg"
 alt: Screenshot of Doug Jones video
-preview: The Cold Case Act has been signed into law, completing a three-year journey that began in a high school classroom and ended in the Oval Office.
+preview: The Cold Case Act review board is currently being stalled by the President's failure to appoint members by the deadline in the bill.
 categories: [Press Release]
 ---
 
